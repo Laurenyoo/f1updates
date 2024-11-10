@@ -29,4 +29,4 @@ jobs:
 
       - name: Run Jupyter notebook
         run: |
-          jupyter nbconvert --to notebook --execute --inplace your_notebook.ipynb
+          jupyter nbconvert --to notebook --execute --inplace fetchf1summaries.ipynb
