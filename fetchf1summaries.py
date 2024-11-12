@@ -45,6 +45,7 @@ try:
     logging.info("Attempting to fetch data from GDELT API...")
     time.sleep(5)
     response = requests.get(base_url, params=params)
+    time.sleep(5)
 
     # Check if the request was successful
     if response.status_code == 200:
