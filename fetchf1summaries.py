@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from newspaper import Article
 import nltk
 import logging
+import time
 
 logging.basicConfig(level=logging.INFO)
 logging.info("Logs start!")
@@ -42,6 +43,7 @@ params = {
 # Try fetching data from GDELT API
 try:
     logging.info("Attempting to fetch data from GDELT API...")
+    time.sleep(5)
     response = requests.get(base_url, params=params)
 
     # Check if the request was successful
