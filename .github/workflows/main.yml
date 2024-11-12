@@ -30,4 +30,4 @@ jobs:
 
       - name: Run Jupyter notebook
         run: |
-          jupyter nbconvert --execute --inplace --to notebook fetchf1summaries.ipynb 
+          jupyter nbconvert --execute --inplace --to notebook fetchf1summaries.ipynb --allow-errors
