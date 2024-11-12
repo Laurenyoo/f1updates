@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 import requests
 from datetime import datetime, timedelta
 from newspaper import Article
@@ -41,30 +39,26 @@ params = {
     Using gdelt to get all motorsport articles posted this week
 '''
 # Try fetching data from GDELT API
-try:
+def fetchGdelt():
     logging.info("Attempting to fetch data from GDELT API...")
-    time.sleep(7)
     response = requests.get(base_url, params=params)
-    time.sleep(7)
 
     # Check if the request was successful
     if response.status_code == 200:
         logging.info("Status Code: " + str(response.status_code))
         articles = response.json()
         logging.info(f"Number of articles retrieved: {len(articles.get('articles', []))}")
+        return articles
     else:
         logging.error(f"Failed to fetch articles, Status Code: {response.status_code}")
         logging.error(f"Response Text: {response.text}")
         articles = {}
-
-except requests.exceptions.RequestException as e:
-    logging.error("An error occurred while fetching data from the GDELT API.")
-    logging.error(e)
-    articles = {}
+        return None
+articles = fetchGdelt()
 '''
     Now all motorsport articles are collected. filter to get all F1 related articles.
 '''
-if response.status_code == 200:
+if articles:
     f1Articles = []
     if 'articles' in articles:
         for article in articles['articles']:
