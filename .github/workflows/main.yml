@@ -4,12 +4,7 @@ on:
   schedule:
     - cron: '0 12 * * 1'  # Runs every Monday at 12 PM UTC (which is 7 AM EST)
   workflow_dispatch:  # This allows manual triggering
-    inputs:
-      notebook:
-        description: 'Choose notebook to run'
-        required: true
-        default: 'fetchf1summaries.ipynb'
-
+  
 jobs:
   run_notebook:
     runs-on: ubuntu-latest
