@@ -51,7 +51,7 @@ def fetchGdelt():
         articles = response.json()
         logging.info(f"Number of articles retrieved: {len(articles.get('articles', []))}")
         return articles
-     elif response.status_code == 429:
+    elif response.status_code == 429:
             logging.error(f"Rate limit exceeded, retrying in {delay} seconds...")
             time.sleep(delay)
             delay *= 2  # Exponential backoff
