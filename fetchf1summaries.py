@@ -41,6 +41,8 @@ params = {
 # Try fetching data from GDELT API
 def fetchGdelt():
     logging.info("Attempting to fetch data from GDELT API...")
+    retries = 5  # Retry up to 5 times
+    delay = 5  # Initial delay of 5 seconds
     response = requests.get(base_url, params=params)
 
     # Check if the request was successful
@@ -49,6 +51,10 @@ def fetchGdelt():
         articles = response.json()
         logging.info(f"Number of articles retrieved: {len(articles.get('articles', []))}")
         return articles
+     elif response.status_code == 429:
+            logging.error(f"Rate limit exceeded, retrying in {delay} seconds...")
+            time.sleep(delay)
+            delay *= 2  # Exponential backoff
     else:
         logging.error(f"Failed to fetch articles, Status Code: {response.status_code}")
         logging.error(f"Response Text: {response.text}")
