@@ -138,9 +138,9 @@ if not articles.empty:
         summary_ids = model.generate(inputs["input_ids"], 
                                      max_length=55,           # max tokens
                                      min_length=20,           # min tokens
-                                     length_penalty=2.0,     # > 1 favors shorter summaries
+                                     length_penalty=2.5,     # > 1 favors shorter summaries
                                      no_repeat_ngram_size=5,  # Avoid repetition and irrelevant sentences
-                                     num_beams=5,             # > 4 improves quality and coherence
+                                     num_beams=6,             # > 4 improves quality and coherence
                                      early_stopping=True
                                     )
         summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
