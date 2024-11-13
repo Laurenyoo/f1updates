@@ -137,7 +137,7 @@ if not articles.empty:
         inputs = tokenizer(text, max_length=1024, return_tensors="pt", truncation=True)
         summary_ids = model.generate(inputs["input_ids"], 
                                      max_length=55,           # max tokens
-                                     min_length=20,           # min tokens
+                                     min_length=10,           # min tokens
                                      length_penalty=2.5,     # > 1 favors shorter summaries
                                      no_repeat_ngram_size=5,  # Avoid repetition and irrelevant sentences
                                      num_beams=6,             # > 4 improves quality and coherence
