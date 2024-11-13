@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install jupyter nbconvert tensorflow transformers tf-keras newspaper3k lxml_html_clean ipywidgets tweepy requests requests_oauthlib torch
+          pip install tensorflow transformers tf-keras newspaper3k lxml_html_clean ipywidgets tweepy requests requests_oauthlib torch gdeltdoc
 
       - name: Run F1 updates script
         run: |
