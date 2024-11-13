@@ -7,6 +7,7 @@ from newspaper import Article
 import nltk
 import logging
 import time
+from gdeltdoc import GdeltDoc, Filters
 
 logging.basicConfig(level=logging.INFO)
 logging.info("Logs start!")
@@ -25,62 +26,36 @@ logging.info(f"Friday: {friday_date}")
 logging.info(f"Monday: {monday_date}")
 # print(f"Friday: {friday_date}")
 # print(f"Monday: {monday_date}")
-
-base_url = "https://api.gdeltproject.org/api/v2/doc/doc"
-params = {
-    "query": "domain:motorsport.com (Formula One OR F1)",
-    "mode": "ArtList",
-    "maxrecords": 250,
-    "startdatetime": friday_date.strftime("%Y%m%d000000"),  # Format: YYYYMMDDHHMMSS
-    "enddatetime": monday_date.strftime("%Y%m%d235959"),      # Format: YYYYMMDDHHMMSS
-    "format": "json"
-}
 '''
     Using gdelt to get all motorsport articles posted this week
 '''
-# Try fetching data from GDELT API
-def fetchGdelt():
-    logging.info("Attempting to fetch data from GDELT API...")
-    retries = 5  # Retry up to 5 times
-    delay = 5  # Initial delay of 5 seconds
-    response = requests.get(base_url, params=params)
+startDate = friday_date.strftime("%Y-%m-%d")  # Format previous Friday's date
+endDate = monday_date.strftime("%Y-%m-%d")    # Format monday date
 
-    for _ in range(retries):
-        # Check if the request was successful
-        if response.status_code == 200:
-            logging.info("Status Code: " + str(response.status_code))
-            articles = response.json()
-            logging.info(f"Number of articles retrieved: {len(articles.get('articles', []))}")
-            return articles
-        elif response.status_code == 429:
-            logging.error(f"Rate limit exceeded, retrying in {delay} seconds...")
-            time.sleep(delay)
-            delay *= 2  # Exponential backoff
-            return fetchGdelt()
-        else:
-            logging.error(f"Failed to fetch articles, Status Code: {response.status_code}")
-            logging.error(f"Response Text: {response.text}")
-            articles = {}
-            return None
-    return None
-articles = fetchGdelt()
+f = Filters(
+    start_date = startDate,
+    end_date = endDate,
+    domain = "motorsport.com",
+    num_records = 250,
+)
+
+gd = GdeltDoc()
+# Search for articles matching the filters
+articles = gd.article_search(f)
 '''
     Now all motorsport articles are collected. filter to get all F1 related articles.
 '''
-if articles:
+if not articles.empty:
     f1Articles = []
-    if 'articles' in articles:
-        for article in articles['articles']:
-            url = article.get('url', '')
-            if "motorsport.com/f1/news" in url:
-                f1Articles.append(article)
+    for row in articles.itertuples():
+        if "motorsport.com/f1/news" in row.url:
+            f1Articles.append(row.url)
     # print(f1Articles)
     '''
         Use Newspaper3k to download the content/text of each article via the url
     '''
     f1_articles_summaries = []
-    for article in f1Articles:
-        url = article.get('url', '')
+    for url in f1Articles:
         try:
             currentArticle = Article(url)
             currentArticle.download()
