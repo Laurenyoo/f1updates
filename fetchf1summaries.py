@@ -76,6 +76,7 @@ if not articles.empty:
     def summarize_to_bullets(text):
         inputs = tokenizer(text, max_length=1024, return_tensors="pt", truncation=True)
         summary_ids = model.generate(inputs["input_ids"], 
+                                     forced_bos_token_id=0,
                                      max_length=175, 
                                      min_length=50, 
                                      length_penalty=2.0, 
