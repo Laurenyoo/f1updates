@@ -41,7 +41,20 @@ f = Filters(
 
 gd = GdeltDoc()
 # Search for articles matching the filters
-articles = gd.article_search(f)
+
+def fetch_articles_with_retry(gd, f, max_retries=5):
+    for attempt in range(max_retries):
+        try:
+            return gd.article_search(f)
+        except RateLimitError:
+            wait = 5 * (2 ** attempt)  # 5s, 10s, 20s, 40s...
+            print(f"Rate limited. Retry {attempt+1}/{max_retries} in {wait}s...")
+            time.sleep(wait)
+
+    print("Failed after retries. Returning empty list.")
+    return []
+
+articles = fetch_articles_with_retry(gd, f)
 '''
     Now all motorsport articles are collected. filter to get all F1 related articles.
 '''
