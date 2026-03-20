@@ -8,6 +8,7 @@ import nltk
 import logging
 import time
 from gdeltdoc import GdeltDoc, Filters
+from gdeltdoc.errors import RateLimitError
 
 logging.basicConfig(level=logging.INFO)
 logging.info("Logs start!")
