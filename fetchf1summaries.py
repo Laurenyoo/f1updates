@@ -64,7 +64,7 @@ if not articles.empty:
     for row in articles.itertuples():
         if "motorsport.com/f1/news" in row.url:
             f1Articles.append(row.url)
-    print("f1Articles Size:", len(f1Articles))
+    print("Total Articles:", len(f1Articles))
     # print(f1Articles)
     '''
         Use Newspaper3k to download the content/text of each article via the url
@@ -78,7 +78,7 @@ if not articles.empty:
             f1_articles_summaries.append(currentArticle.text)
         except Exception as e:
             logging.exception(f"Issue handling article: {url}")
-    # print(f1_articles_summaries)
+    print("Total Scraped Articles:", len(f1_articles_summaries))
     '''
         Use facebook/bart-large-cnn to summarize EACH article
     '''
