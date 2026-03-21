@@ -71,12 +71,16 @@ if not articles.empty:
     '''
     f1_articles_summaries = []
     for url in f1Articles:
+        print(f"Processing URL: {url}")
         try:
-            currentArticle = Article(url)
+            currentArticle = Article(url, request_timeout=10)  # add timeout
             currentArticle.download()
             currentArticle.parse()
-            f1_articles_summaries.append(currentArticle.text)
-        except Exception as e:
+            if currentArticle.text:
+                f1_articles_summaries.append(currentArticle.text)
+            else:
+                logging.warning(f"Empty article text: {url}")
+        except Exception:
             logging.exception(f"Issue handling article: {url}")
     print("Total Scraped Articles:", len(f1_articles_summaries))
     '''
