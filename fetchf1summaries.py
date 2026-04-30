@@ -9,6 +9,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import pandas as pd
 import nltk
 import requests
 from bs4 import BeautifulSoup
@@ -20,6 +21,8 @@ from gdeltdoc.errors import RateLimitError
 os.environ.setdefault("SSL_CERT_FILE", certifi.where())
 
 logging.basicConfig(level=logging.INFO)
+for _log in ("httpx", "httpcore", "huggingface_hub"):
+    logging.getLogger(_log).setLevel(logging.WARNING)
 logging.info("Logs start!")
 try:
     nltk.download("punkt_tab", quiet=True)
@@ -57,6 +60,42 @@ def fetch_page_html(session, url, timeout=15):
     r.raise_for_status()
     r.encoding = r.apparent_encoding or r.encoding
     return r.text
+
+
+def identify_race(article_urls, year):
+    """Detect the Grand Prix name from article URLs. Returns a consistent name or no-race sentinel."""
+    url_blob = " ".join(article_urls).lower()
+    gp_patterns = [
+        (["bahrain-gp", "sakhir"],                                  "Bahrain"),
+        (["saudi-arabian-gp", "saudi-gp", "jeddah"],                "Saudi Arabian"),
+        (["australian-gp", "melbourne", "albert-park"],              "Australian"),
+        (["japanese-gp", "suzuka"],                                  "Japanese"),
+        (["chinese-gp", "shanghai"],                                 "Chinese"),
+        (["miami-gp", "miami-grand-prix"],                           "Miami"),
+        (["emilia-romagna-gp", "imola"],                             "Emilia Romagna"),
+        (["monaco-gp", "monte-carlo"],                               "Monaco"),
+        (["canadian-gp", "montreal", "gilles-villeneuve"],           "Canadian"),
+        (["spanish-gp", "barcelona", "catalunya"],                   "Spanish"),
+        (["austrian-gp", "red-bull-ring", "spielberg"],              "Austrian"),
+        (["british-gp", "silverstone"],                              "British"),
+        (["hungarian-gp", "budapest", "hungaroring"],                "Hungarian"),
+        (["belgian-gp", "spa"],                                      "Belgian"),
+        (["dutch-gp", "zandvoort"],                                  "Dutch"),
+        (["italian-gp", "monza"],                                    "Italian"),
+        (["azerbaijan-gp", "baku"],                                  "Azerbaijan"),
+        (["singapore-gp", "marina-bay"],                             "Singapore"),
+        (["united-states-gp", "us-gp", "cota", "austin"],           "United States"),
+        (["mexico-city-gp", "mexico-gp"],                            "Mexico City"),
+        (["sao-paulo-gp", "brazil-gp", "interlagos"],                "São Paulo"),
+        (["las-vegas-gp", "las-vegas-grand-prix"],                   "Las Vegas"),
+        (["qatar-gp", "lusail"],                                     "Qatar"),
+        (["abu-dhabi-gp", "yas-marina", "yas-island"],               "Abu Dhabi"),
+    ]
+    for patterns, name in gp_patterns:
+        for pattern in patterns:
+            if pattern in url_blob:
+                return f"{year} {name} Grand Prix"
+    return "No race this week ˙◠˙"
 
 
 def article_text_fallback(html):
@@ -110,8 +149,8 @@ def fetch_articles_with_retry(gd, f, max_retries=5):
             print(f"Rate limited. Retry {attempt+1}/{max_retries} in {wait}s...")
             time.sleep(wait)
 
-    print("Failed after retries. Returning empty list.")
-    return []
+    print("Failed after retries. Returning empty DataFrame.")
+    return pd.DataFrame()
 
 articles = fetch_articles_with_retry(gd, f)
 '''
@@ -244,22 +283,58 @@ if not articles.empty:
         logging.info(short)
         
         '''
-            Reformat the shorten summary to be in bullet notation.
+            Identify race from article URLs.
         '''
-        # Reformat text
-        # Split text by period to separate sentences
-        sentences = short.split('.')
-        
-        # Format each sentence with a bullet point
-        bullet_points = "\n".join([f"• {sentence.strip()}" for sentence in sentences if sentence.strip()])
-        
+        race = identify_race(f1Articles, startDate[:4])
+        logging.info("Race identified: %s", race)
+
+        '''
+            Use flan-t5-large to extract race highlights from the condensed BART summary.
+            BART already distilled the articles; flan-t5 reframes them as fan-facing highlights.
+        '''
+        if not filteredText.strip():
+            logging.warning("No filtered content available; skipping flan-t5 highlight extraction.")
+            bullet_items = []
+            bullet_points = ""
+        else:
+            from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+            hl_model_name = "google/flan-t5-large"
+            hl_tokenizer = AutoTokenizer.from_pretrained(hl_model_name)
+            hl_model = AutoModelForSeq2SeqLM.from_pretrained(hl_model_name)
+
+            # Truncate filtered_text to leave room for the prompt within flan-t5's 512 token limit
+            hl_input_text = filteredText[:1200]
+
+            highlight_prompt = (
+                f"List the key F1 race highlights from this weekend. "
+                f"Include: race winner and podium, key on-track battles, pit stop drama, "
+                f"safety car or incidents, qualifying surprises, championship impact, and any notable drama.\n\n"
+                f"Summary: {hl_input_text}\n\nHighlights:"
+            )
+            hl_inputs = hl_tokenizer(highlight_prompt, max_length=512, return_tensors="pt", truncation=True)
+            hl_ids = hl_model.generate(
+                hl_inputs["input_ids"],
+                max_length=200,
+                min_length=30,
+                num_beams=4,
+                length_penalty=1.5,
+                no_repeat_ngram_size=4,
+                early_stopping=True,
+            )
+            highlights_text = hl_tokenizer.decode(hl_ids[0], skip_special_tokens=True)
+            logging.info("Highlights: %s", highlights_text)
+
+            bullet_items = [s.strip() for s in highlights_text.split('.') if s.strip()]
+            bullet_points = "\n".join(f"• {item}" for item in bullet_items)
+
         logging.info(bullet_points)
         logging.info(len(bullet_points))
 
-        bullet_items = [s.strip() for s in sentences if s.strip()]
         output_path = Path(__file__).resolve().parent / "f1_summary_output.json"
         payload = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
+            "race": race,
             "gdelt": {
                 "start_date": startDate,
                 "end_date": endDate,

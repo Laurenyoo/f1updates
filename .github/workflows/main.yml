@@ -2,46 +2,52 @@ name: Run F1 Updates Weekly
 
 on:
   schedule:
-    - cron: '0 12 * * 1'  # Runs every Monday at 12 PM UTC (which is 7 AM EST)
-  workflow_dispatch:  # This allows manual triggering
-  
+    - cron: "0 12 * * 1" # Monday 12:00 UTC (~7 AM EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-  run_notebook:
+  run_f1_updates:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
+
+      - name: Cache Hugging Face hub
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            huggingface-${{ runner.os }}-
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --no-cache-dir \
-                torch \
-                transformers \
-                tf-keras \
-                newspaper3k \
-                lxml_html_clean \
-                ipywidgets \
-                tweepy \
-                requests \
-                requests_oauthlib \
-                gdeltdoc
+          pip install --no-cache-dir -r requirements.txt
 
       - name: Run F1 updates script
+        run: python fetchf1summaries.py
+
+      - name: Commit and push summary JSON
         run: |
-          python fetchf1summaries.py
-          
-      - name: Commit updated notebook
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -f f1_summary_output.json ]; then
+            echo "f1_summary_output.json missing (script may have skipped write); nothing to commit"
+            exit 0
+          fi
           git add f1_summary_output.json
-          git commit -m "Update F1 summaries in notebook"
-          git push "https://${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+          if git diff --staged --quiet; then
+            echo "No changes to f1_summary_output.json"
+          else
+            git commit -m "chore: update F1 summary output [skip ci]"
+            git push
+          fi
