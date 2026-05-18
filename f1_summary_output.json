@@ -1,51 +1,38 @@
 {
-  "generated_at": "2026-05-11T15:20:07.095111+00:00",
-  "race": "2026 Miami Grand Prix",
+  "generated_at": "2026-05-18T15:41:27.650645+00:00",
+  "race": "No race this week ˙◠˙",
   "gdelt": {
-    "start_date": "2026-05-08",
-    "end_date": "2026-05-11",
+    "start_date": "2026-05-15",
+    "end_date": "2026-05-18",
     "domain": "motorsport.com"
   },
   "f1_article_urls": [
-    "https://www.motorsport.com/f1/news/f1-working-overtime-to-monitor-middle-east-as-q1-revenue-surges/10819127/",
-    "https://www.motorsport.com/f1/news/mclaren-strategy-under-fire-after-lando-norris-missed-out-on-miami-gp-victory/10818754/",
-    "https://www.motorsport.com/f1/news/oscar-piastri-shares-how-relationship-with-mark-webber-has-evolved-since-f1-debut/10816570/",
-    "https://www.motorsport.com/f1/news/ferrari-issued-major-warning-from-former-f1-driver-after-miami-gp-upgrade-fails-to-impress/10819106/",
-    "https://www.motorsport.com/f1/news/arvid-lindblad-reveals-f1-dream-still-feels-surreal-after-impressive-rookie-start/10815934/",
-    "https://www.motorsport.com/f1/news/lewis-hamiltons-vice-city-run-turns-miami-into-a-real-life-gta-vice-city-trailer/10819275/",
-    "https://www.motorsport.com/f1/news/inside-cadillacs-miami-gp-homecoming-were-trying-to-give-f1-fans-something-different/10818864/",
-    "https://www.motorsport.com/f1/news/guenther-steiner-aston-martin-has-no-excuse-for-poor-2025-f1-season-start/10816889/",
-    "https://www.motorsport.com/f1/news/lando-norris-on-fixing-f1-get-rid-of-the-battery/10819400/",
-    "https://www.motorsport.com/f1/news/the-real-reason-f1-star-max-verstappen-is-drawn-to-gt3-racing/10819319/",
-    "https://www.motorsport.com/f1/news/guenther-steiner-hits-out-at-miami-gp-stewards-as-he-calls-for-time-limit-on-post-race-penalties/10819493/",
-    "https://www.motorsport.com/f1/news/doriane-pin-says-f1-dream-is-now-a-goal-after-mercedes-test/10819486/",
-    "https://www.motorsport.com/f1/news/kimi-antonelli-sent-george-russell-warning-ahead-of-canadian-gp-by-f1-presenter/10818761/",
-    "https://www.motorsport.com/f1/news/why-cadillac-is-in-a-massive-hurry-to-find-performance-in-f1-2026/10819178/"
+    "https://www.motorsport.com/f1/news/james-vowles-explains-why-williams-cannot-immediately-fix-fw48-weight-issue/10820951/",
+    "https://www.motorsport.com/f1/news/naomi-schiff-warns-2027-fia-rule-changes-could-hit-smaller-f1-teams-hard/10821128/",
+    "https://www.motorsport.com/f1/news/red-bulls-long-running-oscar-piastri-regret-explained-by-former-f1-presenter/10821135/",
+    "https://www.motorsport.com/f1/news/otmar-szafnauer-reveals-failed-kimi-raikkonen-bid-involving-angry-birds-founders/10821043/",
+    "https://www.motorsport.com/f1/news/jenson-button-hails-ross-brawn-as-hondas-saviour-after-2007-f1-disaster/10821223/",
+    "https://www.motorsport.com/f1/news/apple-eyes-huge-opportunity-for-major-f1-expansion-in-the-united-states/10821292/",
+    "https://www.motorsport.com/f1/news/juan-pablo-montoya-pinpoints-major-factor-in-kimi-antonellis-f1-success/10821546/",
+    "https://www.motorsport.com/f1/news/daniel-ricciardo-says-life-feels-more-real-after-abrupt-f1-exit/10821249/"
   ],
-  "scraped_article_count": 14,
+  "scraped_article_count": 8,
   "per_article_summaries": [
-    "Liberty Media CEO Derek Chang says F1 chiefs are \"working overtime\" to come up with contingency plans for the series' Middle Eastern races. F1 was forced to call off its April doubleheader in Bahrain and Saudi Arabia as a result of the US-Israeli war on Iran.",
-    "Former F1 TV presenter Will Buxton has called out McLaren's strategy. Buxton claims that the Woking outfit has repeatedly made strategic errors. Lando Norris had been leading the race at the Miami International Autodrome. But, unfortunately for the reigning drivers' champion, McLaren performed a successful undercut.",
-    "Oscar Piastri has confirmed changes to his personal team ahead of the 2026 F1 season. Mark Webber is still Piastri's manager but has stepped away from trackside role. Pedro Matos and Emma Murray will join the 25-year-old at the track.",
-    "Former Formula 1 driver Karun Chandhok says Ferrari's upgrades left a lot to be desired. Chandhok believes McLaren and Mercedes will not be worried by Ferrari's updates. Kimi Antonelli won the Miami Grand Prix for Mercedes.",
-    "Racing Bulls rookie Arvid Lindblad has said that it has still not sunk in that he is racing in Formula 1. The 18-year-old driver secured a full-time F1 seat with Red Bull's sister squad after just one season in Formula 2. He currently sits 12th in the drivers' standings behind his team-mate Liam Lawson in 10th.",
-    "Lewis Hamilton posted a video to social media celebrating the city of Miami. The seven-time world champion can be seen racing a Ferrari Testarossa. The video embraces the visuals of the 1984 TV show Miami Vice, but more importantly, the video game Grand Theft Auto.",
-    "F1's 11th team has tried to make a rapid off-track impact in Miami. F1 branding in general was almost impossible to escape in Miami. Cadillac carved out its own space by taking over Jungle Plaza in the Miami Design District. The team also presented a limited CT5-V Blackwing F1 Collector Series car.",
-    "Guenther Steiner says there is no excuse for Aston Martin's poor start to the 2026 season. The Silverstone outfit entered the 2026 season with a new power unit partnership with Honda. But the high expectations from inside and outside the paddock were not met. Aston Martin sits last in the constructors' standings with zero points.",
-    "F1 agreed to a number of energy deployment tweaks to allow drivers to push harder in qualifying. Full effect of those changes has yet to come to light at circuits that are trickier for energy recovery than the stop-start Miami circuit. F1 stakeholders have already agreed in principle to go further for 2027 with an increase in power output from the combustion engine.",
-    "Red Bull's Max Verstappen will make his GT3 debut at the Nurburgring 24 Hours. The Dutchman is considering a move away from Formula 1 in 2026. GT3 architect Stephane Ratel says Verstappen is drawn to the category because it offers him a chance to make a difference.",
-    "Guenther Steiner has criticised the Miami Grand Prix stewards. Steiner claims that a time limit should be introduced for post-race penalties. Several incidents were under investigation by the stewards following the race. Max Verstappen and George Russell for causing a collision, Charles Leclerc for leaving the track multiple times on the last lap, and Leclerc for driving his car in an unsafe condition.",
-    "2025 F1 Academy champion Doriane Pin hopes that her Formula 1 test with Mercedes will open the door to more opportunities in the championship. The French driver joined the Mercedes Junior Team in 2024 when she entered the all-female racing series. After winning the championship in 2025, she was promoted to the role of development driver at the Brackley outfit.",
-    "Kimi Antonelli has won back-to-back races this season. The 19-year-old is now 20 points clear of Mercedes team-mate George Russell. James Hinchcliffe says Russell could end Antonelli's winning streak at Canadian Grand Prix.",
-    "Sergio Perez says Cadillac is 'in a massive hurry to find performance' Mexican has been battling with Aston Martin-Honda's Fernando Alonso and Lance Stroll. Cadillac has been slowest in the pitlane in the first two races of the season."
+    "Williams team principal James Vowles reveals the team's weight problem. Vowles says the engineering work is done and the parts exist, at least on paper. The problem is converting these concepts into physical components under the constraints of the championship's cost cap. The FW48 is understood to have started the season much heavier than the team would have wanted.",
+    "The FIA has confirmed that changes to the engine hardware will be introduced in 2027. A 50 kW increase in power from the internal combustion engine and a decrease in the electric power of the same amount. This means that instead of the almost 50:50 split between internal combustion and electric power that the cars currently have, it will be closer to 60:40.",
+    "Will Buxton believes that Red Bull has regretted not signing Oscar Piastri as a junior driver. Piastri is being targeted as a potential replacement for four-time F1 champion Max Verstappen. Buxton's co-host and former W Series driver Naomi Schiff backed Piastri as a \"good fit\" for Red Bull.",
+    "Otmar Szafnauer says he tried to sign Kimi Raikkonen for Force India in 2012. The former team principal met the Finn at the season finale in Sao Paulo. Raikkonen left Ferrari at the end of 2009 and returned with Lotus in 2012. The Finn scored 390 points, 13 podium finishes and won two races.",
+    "Jenson Button has reflected on the tumultuous period at Honda during the 2007 and 2008 Formula 1 seasons. The 2009 world champion opened up about the struggles that the Japanese manufacturer faced following his maiden F1 victory at the 2006 Hungarian Grand Prix. Button described the 2007 season as an absolute disaster.",
+    "Apple's senior vice president of services Eddy Cue believes Formula 1 has the opportunity for long-term expansion in the United States. Cue: \"I think there is a huge opportunity. It's not a 10% or 20%. I think it's a 'how many times X can we grow it over the years?'\"",
+    "Juan Pablo Montoya says Peter 'Bono' Bonnington is a 'big part' of Kimi Antonelli's form at Mercedes. The 19-year-old is the youngest driver to lead the championship in F1 history. Antonelli is now 20 points clear of team-mate George Russell in second.",
+    "Daniel Ricciardo has opened up about his adjustment to life away from the Formula 1 grid. The eight-time grand prix winner retired from F1 after the 2024 Singapore Grand Prix. Ricciardo is now a brand ambassador for Ford and runs his own brand."
   ],
-  "filtered_text": " F1 was forced to call off its April doubleheader in Bahrain and Saudi Arabia as a result of the US-Israeli war on Iran. Former F1 TV presenter Will Buxton has called out McLaren's strategy.  Lando Norris had been leading the race at the Miami International Autodrome.  But, unfortunately for the reigning drivers' champion, McLaren performed a successful undercut. Oscar Piastri has confirmed changes to his personal team ahead of the 2026 F1 season.  Mark Webber is still Piastri's manager but has stepped away from trackside role. Former Formula 1 driver Karun Chandhok says Ferrari's upgrades left a lot to be desired.  Chandhok believes McLaren and Mercedes will not be worried by Ferrari's updates.  Kimi Antonelli won the Miami Grand Prix for Mercedes.  The 18-year-old driver secured a full-time F1 seat with Red Bull's sister squad after just one season in Formula 2.  He currently sits 12th in the drivers' standings behind his team-mate Liam Lawson in 10th. Lewis Hamilton posted a video to social media celebrating the city of Miami.  The seven-time world champion can be seen racing a Ferrari Testarossa. Guenther Steiner says there is no excuse for Aston Martin's poor start to the 2026 season.  Aston Martin sits last in the constructors' standings with zero points. F1 agreed to a number of energy deployment tweaks to allow drivers to push harder in qualifying. Red Bull's Max Verstappen will make his GT3 debut at the Nurburgring 24 Hours.  GT3 architect Stephane Ratel says Verstappen is drawn to the category because it offers him a chance to make a difference. Guenther Steiner has criticised the Miami Grand Prix stewards.  Steiner claims that a time limit should be introduced for post-race penalties.  Several incidents were under investigation by the stewards following the race.  Max Verstappen and George Russell for causing a collision, Charles Leclerc for leaving the track multiple times on the last lap, and Leclerc for driving his car in an unsafe condition. 2025 F1 Academy champion Doriane Pin hopes that her Formula 1 test with Mercedes will open the door to more opportunities in the championship.  The French driver joined the Mercedes Junior Team in 2024 when she entered the all-female racing series.  The 19-year-old is now 20 points clear of Mercedes team-mate George Russell.  James Hinchcliffe says Russell could end Antonelli's winning streak at Canadian Grand Prix. Sergio Perez says Cadillac is 'in a massive hurry to find performance' Mexican has been battling with Aston Martin-Honda's Fernando Alonso and Lance Stroll.  Cadillac has been slowest in the pitlane in the first two races of the season. ",
-  "short_summary": "Kimi Antonelli won the Miami Grand Prix for Mercedes. Oscar Piastri has confirmed changes to his personal team ahead of the 2026 F1 season. Max Verstappen will make his GT3 debut at the N",
+  "filtered_text": "Williams team principal James Vowles reveals the team's weight problem. Will Buxton believes that Red Bull has regretted not signing Oscar Piastri as a junior driver.  Piastri is being targeted as a potential replacement for four-time F1 champion Max Verstappen.  Buxton's co-host and former W Series driver Naomi Schiff backed Piastri as a \"good fit\" for Red Bull.  Raikkonen left Ferrari at the end of 2009 and returned with Lotus in 2012. Juan Pablo Montoya says Peter 'Bono' Bonnington is a 'big part' of Kimi Antonelli's form at Mercedes.  Antonelli is now 20 points clear of team-mate George Russell in second. ",
+  "short_summary": "Oscar Piastri is being targeted as a potential replacement for Max Verstappen. Kimi Antonelli is now 20 points clear of team-mate George Russell in second. Juan Pablo Montoya says Peter 'Bono",
   "bullet_items": [
-    "Lewis Hamilton posts a video on social media celebrating the city of Miami",
-    "The seven-time world champion can be seen racing a Ferrari Testarossa",
-    "Kimi Antonelli won the Miami Grand Prix for Mercedes",
-    "The 18-year-old driver secured a full-time F1 seat with Red Bull's sister squad"
+    "Williams team principal James Vowles reveals team's weight problem",
+    "Will Buxton believes Red Bull has regretted not signing Oscar Piastri as a junior driver",
+    "Kimi Antonelli is now 20 points clear of team-mate George Russell in second"
   ],
-  "bullet_markdown": "• Lewis Hamilton posts a video on social media celebrating the city of Miami\n• The seven-time world champion can be seen racing a Ferrari Testarossa\n• Kimi Antonelli won the Miami Grand Prix for Mercedes\n• The 18-year-old driver secured a full-time F1 seat with Red Bull's sister squad"
+  "bullet_markdown": "• Williams team principal James Vowles reveals team's weight problem\n• Will Buxton believes Red Bull has regretted not signing Oscar Piastri as a junior driver\n• Kimi Antonelli is now 20 points clear of team-mate George Russell in second"
 }
