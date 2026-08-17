@@ -1,32 +1,43 @@
 {
-  "generated_at": "2026-08-03T14:45:38.762579+00:00",
-  "race": "2026 Hungarian Grand Prix",
+  "generated_at": "2026-08-17T12:52:52.679889+00:00",
+  "race": "2026 Dutch Grand Prix",
   "gdelt": {
-    "start_date": "2026-07-31",
-    "end_date": "2026-08-03",
+    "start_date": "2026-08-14",
+    "end_date": "2026-08-17",
     "domain": "motorsport.com"
   },
   "f1_article_urls": [
-    "https://www.motorsport.com/f1/news/audi-wont-upgrade-f1-power-unit-again-until-2027/10843122/",
-    "https://www.motorsport.com/f1/news/lando-norris-praised-for-true-world-champions-drive-at-f1-hungarian-gp/10843683/",
-    "https://www.motorsport.com/f1/news/max-verstappen-gives-future-update-going-into-the-f1-summer-break-of-course-i-can-easily-stop-but-i/10843532/",
-    "https://www.motorsport.com/f1/news/rachel-brookes-predicts-major-driver-f1-changes-for-2027/10843678/",
-    "https://www.motorsport.com/f1/news/oliver-bearman-responds-to-aston-martin-rumours-with-clear-ferrari-message/10843713/"
+    "https://www.motorsport.com/f1/news/king-willem-alexander-to-present-f1-dutch-gp-winners-trophy-at-zandvoort/10846416/",
+    "https://www.motorsport.com/f1/news/george-russell-still-carries-scars-from-2020-mercedes-f1-call-up/10846449/",
+    "https://www.motorsport.com/f1/news/f1-2026-mid-season-grades-innovative-ferrari-impresses-with-strong-start/10846497/",
+    "https://www.motorsport.com/f1/news/max-verstappen-pinpoints-red-bulls-big-priority-for-second-half-of-f1-2026/10846420/",
+    "https://www.motorsport.com/f1/news/what-exactly-was-behind-franco-colapintos-miami-breakthrough-at-alpine/10846004/",
+    "https://www.motorsport.com/f1/news/the-life-and-racing-lessons-allan-mcnish-learned-from-ayrton-senna-and-audi/10846242/",
+    "https://www.motorsport.com/f1/news/max-verstappen-unveils-special-helmet-for-final-f1-dutch-grand-prix/10846299/",
+    "https://www.motorsport.com/f1/news/mercedes-no-longer-needs-max-verstappen-says-guenther-steiner/10846482/",
+    "https://www.motorsport.com/f1/news/bortoleto-expects-long-term-stay-at-audis-f1-team/10846331/",
+    "https://www.motorsport.com/f1/news/honda-reveals-timeline-to-become-a-top-competitor-in-f1-again/10846301/"
   ],
-  "scraped_article_count": 5,
+  "scraped_article_count": 10,
   "per_article_summaries": [
-    "Allan McNish says the next power unit update will not be until 2027. The reason is to stay within the budget cap, according to the Sauber racing director. Audi has scored points in the last three rounds, edging Williams out of eighth.",
-    "David Coulthard has praised Lando Norris after his victory at the Hungarian Grand Prix. The McLaren driver secured the first grand prix victory of the season for both himself and McLaren at the Hungaroring. Kimi Antonelli leads the drivers' standings with 219 points. Lewis Hamilton is second with 169 points and George Russell is third with 160 points.",
-    "Max Verstappen says he is \"feeling good\" about his place in Formula 1. The Red Bull driver says he can easily walk away tomorrow if he wanted to. The 28-year-old is unhappy with the 2026 power unit regulations and Red Bull's chassis.",
-    "Rachel Brookes has predicted a massive overhaul of the F1 grid. She tipped Max Verstappen to join Mercedes and McLaren's Oscar Piastri to replace him at Red Bull. An all-British line-up at McLaren and moves to Audi, Alpine and Williams for Carlos Sainz, Fernando Alonso and Franco Colapinto also suggested.",
-    "Oliver Bearman has reaffirmed his commitment to the Ferrari driver programme. The 21-year-old was speaking on the F1 Beyond The Grid podcast. Bearman is 13th in the drivers' championship with 18 points after the first half of the 2026 season."
+    "King Willem-Alexander of the Netherlands will present the winner's trophy at the Dutch Grand Prix at Zandvoort. It will be his first 'official' visit to a sporting event in the Netherlands to present a prize. F1 management and the Dutch GP organisers agreed to a single-year contract extension, securing the event for the 2026 season.",
+    "George Russell reveals he still carries scars on his hips from squeezing into Lewis Hamilton's race seat during his appearance for the Brackley outfit at the 2020 Sakhir Grand Prix. Russell was called up to Mercedes for the penultimate race of 2020 after Hamilton tested positive for COVID-19.",
+    "Ferrari finished second in both championships in the first half of the Formula 1 season. The Italian team has impressed the paddock with its innovative approach to the 2026 ruleset. The team's biggest weakness is the power unit, though, losing several tenths of lap time on the straights.",
+    "Max Verstappen is 110 points behind championship leader Kimi Antonelli. Red Bull's problems are more complex this time around. The Dutchman says a new problem seems to emerge at Red Bull every weekend. The RB22 is still struggling with corner entry instability and mid-corner understeer.",
+    "Alpine was overtaken by Racing Bulls in the final weeks before Formula 1's summer break. Pierre Gasly and Franco Colapinto say it is simply a matter of car development. Alpine is pinning a lot of hope on its upgrade package for Zandvoort.",
+    "Allan McNish is Audi's first racing director in Formula 1. The Scot won the Le Mans 24 Hours three times as a driver. McNish was a McLaren test driver in the late '80s and early '90s. He raced in F1 in 2002 for newcomer Toyota before returning to Audi.",
+    "Max Verstappen has unveiled a special-edition helmet design ahead of the 2026 Dutch Grand Prix. The design abandons his standard 2026 design for a white and blue colourway inspired by the traditional Dutch Delftware ceramics. The upcoming race weekend at Zandvoort will be the final running of the Dutch Grand Prix.",
+    "Former Haas F1 team principal Guenther Steiner believes Mercedes' need to sign Max Verstappen has faded. Steiner suggests the Brackley outfit has already found \"the next Max Verstappen\" in Kimi Antonelli. Verstappen's F1 future has been the subject of paddock rumours for some time.",
+    "Gabriel Bortoleto says he has a deal with Audi for the next few seasons. The Brazilian joined the team in 2025 for its final season as Sauber. He scored 19 points in his rookie year, and across 2026 has scored 10 of Audi's 12 points.",
+    "Honda will introduce its first ADUO upgrade of the year at Zandvoort. The Japanese manufacturer will focus on improving the internal combustion engine. Honda is working closely with Aston Martin to integrate its power unit into their new chassis. Honda aims to be back at the top by the end of 2027 or early 2028."
   ],
-  "filtered_text": " The reason is to stay within the budget cap, according to the Sauber racing director.  Audi has scored points in the last three rounds, edging Williams out of eighth. David Coulthard has praised Lando Norris after his victory at the Hungarian Grand Prix.  The McLaren driver secured the first grand prix victory of the season for both himself and McLaren at the Hungaroring.  Lewis Hamilton is second with 169 points and George Russell is third with 160 points. Max Verstappen says he is \"feeling good\" about his place in Formula 1.  The Red Bull driver says he can easily walk away tomorrow if he wanted to.  The 28-year-old is unhappy with the 2026 power unit regulations and Red Bull's chassis.  She tipped Max Verstappen to join Mercedes and McLaren's Oscar Piastri to replace him at Red Bull.  An all-British line-up at McLaren and moves to Audi, Alpine and Williams for Carlos Sainz, Fernando Alonso and Franco Colapinto also suggested. Oliver Bearman has reaffirmed his commitment to the Ferrari driver programme. ",
-  "short_summary": "David Coulthard has praised Lando Norris after his victory at the Hungarian Grand Prix. Max Verstappen says he is \"feeling good\" about his place in Formula 1. Oliver Bearman has reaffirmed his commitment to",
+  "filtered_text": "King Willem-Alexander of the Netherlands will present the winner's trophy at the Dutch Grand Prix at Zandvoort. George Russell reveals he still carries scars on his hips from squeezing into Lewis Hamilton's race seat during his appearance for the Brackley outfit at the 2020 Sakhir Grand Prix.  Russell was called up to Mercedes for the penultimate race of 2020 after Hamilton tested positive for COVID-19. Ferrari finished second in both championships in the first half of the Formula 1 season. Max Verstappen is 110 points behind championship leader Kimi Antonelli.  Red Bull's problems are more complex this time around.  The Dutchman says a new problem seems to emerge at Red Bull every weekend. Alpine was overtaken by Racing Bulls in the final weeks before Formula 1's summer break.  Pierre Gasly and Franco Colapinto say it is simply a matter of car development.  Alpine is pinning a lot of hope on its upgrade package for Zandvoort. Allan McNish is Audi's first racing director in Formula 1.  McNish was a McLaren test driver in the late '80s and early '90s.  He raced in F1 in 2002 for newcomer Toyota before returning to Audi. Max Verstappen has unveiled a special-edition helmet design ahead of the 2026 Dutch Grand Prix.  The upcoming race weekend at Zandvoort will be the final running of the Dutch Grand Prix. Former Haas F1 team principal Guenther Steiner believes Mercedes' need to sign Max Verstappen has faded.  Steiner suggests the Brackley outfit has already found \"the next Max Verstappen\" in Kimi Antonelli.  Verstappen's F1 future has been the subject of paddock rumours for some time. Gabriel Bortoleto says he has a deal with Audi for the next few seasons.  The Brazilian joined the team in 2025 for its final season as Sauber.  He scored 19 points in his rookie year, and across 2026 has scored 10 of Audi's 12 points.  Honda is working closely with Aston Martin to integrate its power unit into their new chassis. ",
+  "short_summary": "George Russell reveals he still carries scars on his hips from squeezing into Lewis Hamilton's race seat at the 2020 Sakhir Grand Prix. Mercedes' need to sign Max Verstappen has faded, according to Guenther Steiner",
   "bullet_items": [
-    "Max Verstappen says he is \"feeling good\" about his place in Formula 1",
-    "The Red Bull driver says he can easily walk away tomorrow if he wanted to",
-    "David Coulthard has praised Lando Norris after his victory at the Hungarian Grand Prix"
+    "King Willem-Alexander of the Netherlands will present the winner's trophy at the Dutch Grand Prix at Zandvoort",
+    "George Russell reveals he still carries scars on his hips from squeezing into Lewis Hamilton's race seat",
+    "Max Verstappen is 110 points behind championship leader Kimi Antonelli",
+    "Red Bull's problems are more complex this time around"
   ],
-  "bullet_markdown": "• Max Verstappen says he is \"feeling good\" about his place in Formula 1\n• The Red Bull driver says he can easily walk away tomorrow if he wanted to\n• David Coulthard has praised Lando Norris after his victory at the Hungarian Grand Prix"
+  "bullet_markdown": "• King Willem-Alexander of the Netherlands will present the winner's trophy at the Dutch Grand Prix at Zandvoort\n• George Russell reveals he still carries scars on his hips from squeezing into Lewis Hamilton's race seat\n• Max Verstappen is 110 points behind championship leader Kimi Antonelli\n• Red Bull's problems are more complex this time around"
 }
